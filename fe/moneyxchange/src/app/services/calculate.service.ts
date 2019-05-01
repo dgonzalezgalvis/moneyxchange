@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class CalculateService {
-  url = 'apiurl';
+  url = 'http://localhost:59915/api/Exchanges/';
   constructor(private _http: HttpClient) { }
 
   getChangeRate(from, to) {
-    this._http.get(this.url + '/base=' + from + '&symbols=' + to);
+    return this._http.get<any>(this.url + from + '/' + to);
   }
 
 }
