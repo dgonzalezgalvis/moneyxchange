@@ -35,6 +35,14 @@ namespace MoneyXchange.Api.Migrations
                     currency = "EUR",
                     factor = 0.89F
                 });
+
+            context.Logins.AddOrUpdate(
+                new Login()
+                {
+                    Id = 1,
+                    username = "Diego",
+                    password = "1234"
+                });
         }
     }
 }

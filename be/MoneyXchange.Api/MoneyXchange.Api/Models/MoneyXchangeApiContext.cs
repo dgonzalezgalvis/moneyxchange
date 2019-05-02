@@ -20,5 +20,7 @@ namespace MoneyXchange.Api.Models
         }
 
         public System.Data.Entity.DbSet<MoneyXchange.Api.Models.Exchange> Exchanges { get; set; }
+
+        public System.Data.Entity.DbSet<MoneyXchange.Api.Models.Login> Logins { get; set; }
     }
 }
